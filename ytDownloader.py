@@ -7,6 +7,7 @@ import sys
 
 ydl_opts = {
     'format': 'bestaudio/best',
+    'outtmpl': '~/Desktop/DownloadedMusic/%(title)s.%(ext)s',
     'postprocessors': [{
         'key': 'FFmpegExtractAudio',
         'preferredcodec': 'mp3',
