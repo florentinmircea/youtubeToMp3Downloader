@@ -25,7 +25,6 @@ class myThread (threading.Thread):
       self.name = name
       self.counter = counter
    def run(self):
-      # print ("Starting " + self.name)
       print_time(self.name, self.counter, downloaded)
       print ("Exiting " + self.name)
 
@@ -42,7 +41,6 @@ class myThreadDownload (threading.Thread):
       self.threadID = threadID
       self.name = name
    def run(self):
-      # print ("Starting " + self.name)
       download(self.name, downloaded)
       print ("Exiting " + self.name)
 
@@ -61,7 +59,6 @@ thread2 = myThreadDownload(2, "Downloader")
 # Start new Threads
 thread1.start()
 thread2.start()
-# thread1.join()
 thread2.join()
 if not thread2.is_alive():
    downloaded = True
